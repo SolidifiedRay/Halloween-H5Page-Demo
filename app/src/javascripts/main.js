@@ -9,6 +9,7 @@
         var bgMusic = $('audio').get(0);
         var $btnMusic = $('.btn-music');
         var $upArrow = $('.up-arrow');
+        bgMusic.play();
 
         // background music control
         $btnMusic.click(function () {
@@ -54,6 +55,19 @@
             },
             onTransitionEnd: function (swiper) {       // play animations of the current slide
                 animationControl.playAnimation(swiper);
+                if (document.getElementById("slide-4").style.zIndex == "1"){
+                    $('#bg').prop('volume', 0.1);
+                    $('#fire').get(0).play();
+                }else{
+                    if (document.getElementById("slide-6").style.zIndex == "1"){
+                        $('#bg').prop('volume', 0.1);
+                        $('#horrify').get(0).play();
+                    }else{
+                        $('#bg').prop("volume", 1.0);
+                        $('#horrify').get(0).pause();
+                        $('#fire').get(0).pause();
+                    }
+                }
             },
             onTouchStart: function (swiper, event) {    // mobile devices don't allow audios to play automatically, it has to be triggered by a user event(click / touch).
                 if (!$btnMusic.hasClass('paused') && bgMusic.paused) {

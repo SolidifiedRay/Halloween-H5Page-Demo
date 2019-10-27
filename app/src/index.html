@@ -63,7 +63,7 @@
             </marquee>
             <p class="item-text animated" data-ani-name="fadeInRight" data-ani-duration="2s" data-ani-delay="0.3s">也有看见温柔的姑娘,</p>
         </div>
-        <div class="swiper-slide slide-4">
+        <div class="swiper-slide slide-4" id="slide-4">
             <img class="item-image" src="../images/04.gif">
             <p class="item-text animated" data-ani-name="fadeInUp" data-ani-duration="1s" data-ani-delay="0.3s">但是… … 这并不是全部。</p>
         </div>
@@ -73,7 +73,7 @@
             </marquee>
             <p class="item-text animated" data-ani-name="fadeInRight" data-ani-duration="2s" data-ani-delay="0.3s">创造与毁灭共存，正义与邪恶共生。我相信混沌。</p>
         </div>
-        <div class="swiper-slide slide-6">
+        <div class="swiper-slide slide-6" id="slide-6">
             <div class="item-image animated" data-ani-name="flipInY" data-ani-duration="1s" data-ani-delay="0s"></div>
             <p class="item-text animated" data-ani-name="fadeInRight" data-ani-duration="1s" data-ani-delay="0.6s">11月1，是这片大陆年度祭典的一天，也是紧接着万圣夜百鬼夜行的一天。</p>
         </div>
@@ -110,9 +110,17 @@
     <i class="icon-note"></i>
 </button>
 
-<audio loop>
+<audio loop id="bg">
     <source src="audios/bgm.mp3" type="audio/mpeg">
 </audio>
+<audio id="fire">
+    <source src="audios/fire.mp3" type="audio/mpeg">
+</audio>
+<audio id="horrify" loop>
+    <source src="audios/horrify.mp3" type="audio/mpeg">
+</audio>
+
+
 
 <!-- Don't delete this. It's needed for development workflow. -->
 <!-- inject:js -->
