@@ -1,5 +1,5 @@
 .slide-7 {
-    background-color: #252323;
+    background-color: #000000;
     
     .item-image {
         width: 120%;
@@ -14,17 +14,35 @@
         background-image: url('../images/07.png');
     }
 
-    .item-text {
+    .text-div{
+        position:absolute; 
+        bottom:5%; 
+        width: 100%
+    }
+
+    .item-text1 {
         width: 18rem;
         color: #fff;
         font-size: 1.2rem;
-        font-weight: bold;
-        position: absolute;
-        top: 85%;
+        position: relative;
+        top: 0;
         left: 0;
         right: 0;
         margin: 0 auto;
         text-align: center;
-        background-color: #252323;
+        background-color: #000000;
+    }
+
+    .item-text2 {
+        width: 18rem;
+        color: #fff;
+        font-size: 1.2rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #000000;
     }
 }

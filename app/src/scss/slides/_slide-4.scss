@@ -1,22 +1,27 @@
 .slide-4 {
-    background-color: #252323;
+    background-color: #000000;
     
     .item-image {
         width: 100%;
         margin-top: 50%;
     }
 
-    .item-text {
+    .text-div{
+        position:absolute; 
+        bottom:5%; 
+        width: 100%
+    }
+
+    .item-text1 {
         width: 18rem;
         color: #fff;
         font-size: 1.2rem;
-        font-weight: bold;
-        position: absolute;
-        top: 85%;
+        position: relative;
+        top: 0;
         left: 0;
         right: 0;
         margin: 0 auto;
         text-align: center;
-        background-color: #252323;
+        background-color: #000000;
     }
 }

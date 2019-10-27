@@ -1,22 +1,48 @@
 .slide-2 {
-    background-color: #252323;
+    background-color: #000000;
 
-    .item-image {
-        width: 1000px;
-        margin-top: 10%;
+    #wrapper2{
+        width: 100%;
+        position: relative;
+        // text-align: right;
+    }
+    
+    #image2{
+        width: 200%;
+        position: absolute;
+        right: 0;
+        margin-top: 30%;
     }
 
-    .item-text {
+    .text-div{
+        position:absolute; 
+        bottom:5%; 
+        width: 100%
+    }
+
+    .item-text1 {
         width: 18rem;
         color: #fff;
         font-size: 1.2rem;
-        font-weight: bold;
-        position: absolute;
-        top: 85%;
+        position: relative;
+        top: 0;
         left: 0;
         right: 0;
         margin: 0 auto;
         text-align: center;
-        background-color: #252323;
+        background-color: #000000;
+    }
+
+    .item-text2 {
+        width: 18rem;
+        color: #fff;
+        font-size: 1.2rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #000000;
     }
 }

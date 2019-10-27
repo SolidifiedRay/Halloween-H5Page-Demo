@@ -6,6 +6,9 @@
     var bgMusic = 'bg';
     var fireMusic = 'fire';
     var horrifyMusic = 'horrify';
+    // document.getElementById("marquee2").stop();
+    // document.getElementById("marquee3").stop();
+    // document.getElementById("marquee5").stop();
     
     function playAudio(id) {
         var x = document.getElementById(id);
@@ -71,31 +74,78 @@
                 animationControl.playAnimation(swiper);
                 if (document.getElementById("slide-4").style.zIndex == "1") {
                     setVolume(bgMusic, 0.1);
-                    pauseAudio(horrifyMusic);
                     playAudio(fireMusic);
                 }else{
                     pauseAudio(fireMusic);
-                    if (document.getElementById("slide-6").style.zIndex == "1") {
-                        setVolume(bgMusic, 0.1);
-                        playAudio(horrifyMusic);
-                    } else {
-                        setVolume(bgMusic, 1);
-                        pauseAudio(horrifyMusic);
-                    }
-                }
-            },
-            onTouchStart: function (swiper, event) {    // mobile devices don't allow audios to play automatically, it has to be triggered by a user event(click / touch).
-                playAudio(bgMusic);
-                if (document.getElementById("slide-3").style.zIndex == "1") {
-                    setVolume(bgMusic, 0.1);
-                    playAudio(fireMusic);
-                } else {
                     if (document.getElementById("slide-5").style.zIndex == "1") {
                         setVolume(bgMusic, 0.1);
                         playAudio(horrifyMusic);
                     } else {
                         setVolume(bgMusic, 1);
-                        pauseAudio(horrifyMusic);
+                    }
+                }
+                if (document.getElementById("slide-1").style.zIndex == "1") {
+                    $('#image2').css('left', '-100%');
+                    $('#image1').stop(true, true).delay(500).animate({
+                        opacity: "1.0",
+                    }, 2000, function(){
+                        $('#image1').stop(true, true).animate({
+                            width: "200%",
+                            marginTop: '30%',
+                            marginLeft: '-50%',
+                        }, 2000);
+                    });
+                }
+                if (document.getElementById("slide-2").style.zIndex == "1"){
+                    $('#image2').stop(true,true).animate({
+                        left: "-30%",
+                    }, 5000);
+                    $('#image3').css('left', '0%');
+                }
+                
+                if (document.getElementById("slide-3").style.zIndex == "1") {
+                    $('#image2').css('left', '-100%');
+                    $('#image3').stop(true, true).delay(500).animate({
+                        left: "-80%",
+                    }, 5000);
+                }
+                if (document.getElementById("slide-4").style.zIndex == "1") {
+                    $('#image3').css('left', '0%');
+                    $('#image5').css('left', '0%');
+                }
+                
+                if (document.getElementById("slide-5").style.zIndex == "1") {
+                    $('#image5').stop(true, true).delay(500).animate({
+                        left: "-90%"
+                    }, 3500, function () {
+                        $('#image5').stop(true, true).animate({
+                            left: "0%"
+                        }, 3500, function(){
+                            $('#image5').stop(true, true).animate({
+                                left: "-90%"
+                            }, 3500, function () {
+                                $('#image5').stop(true, true).animate({
+                                    left: "0%"
+                                }, 3500);
+                            });
+                        });
+                    });
+                }
+                if (document.getElementById("slide-6").style.zIndex == "1") {
+                    $('#image5').css('left', '0%');
+                }
+            },
+            onTouchStart: function (swiper, event) {    // mobile devices don't allow audios to play automatically, it has to be triggered by a user event(click / touch).
+                playAudio(bgMusic);
+                if (document.getElementById("slide-3").style.zIndex == "1") {
+                    setVolume(bgMusic, 0.2);
+                    playAudio(fireMusic);
+                } else {
+                    if (document.getElementById("slide-5").style.zIndex == "1") {
+                        setVolume(bgMusic, 0.2);
+                        playAudio(horrifyMusic);
+                    } else {
+                        setVolume(bgMusic, 1);
                         pauseAudio(fireMusic);
                     }
                 }

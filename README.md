@@ -1,10 +1,6 @@
-# Halloween-H5Page-Demo
-
-Please open the page with a phone https://solidifiedray.github.io/2019-Halloween-H5-Page/
-
-This H5 page uses the frame work from https://github.com/panteng/wechat-h5-boilerplate
-
-To run this page:
+# halloween-matchup
+- $ git clone --depth=1 https://github.com/panteng/wechat-h5-boilerplate.git your-project-name
+- $ cd your-project-name
 - $ npm install
 - $ npm install --global gulp-cli
 - $ npm install --save-dev gulp
