@@ -1,0 +1,29 @@
+.slide-6 {
+    background-color: #252323;
+    
+    .item-image {
+        width: 120%;
+        height: 120%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 1%;
+        left: -10%;
+        right: 0;
+        margin: auto;
+        background-image: url('../images/06.png');
+    }
+
+    .item-text {
+        width: 18rem;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        position: absolute;
+        top: 85%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
