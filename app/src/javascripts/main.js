@@ -88,10 +88,10 @@
                     $('#image2').css('left', '-100%');
                     $('#image1').stop(true, true).delay(500).animate({
                         opacity: "1.0",
-                    }, 2000, function(){
+                    }, 1300, function(){
                         $('#image1').stop(true, true).animate({
                             width: "200%",
-                            marginTop: '30%',
+                            marginTop: '25%',
                             marginLeft: '-50%',
                         }, 2000);
                     });
@@ -101,6 +101,10 @@
                         left: "-30%",
                     }, 5000);
                     $('#image3').css('left', '0%');
+                    $('#image1').css('opacity', '0.0');
+                    $('#image1').css('width', '50%');
+                    $('#image1').css('margin', '0 auto');
+                    $('#image1').css('margin-top', '45%');
                 }
                 
                 if (document.getElementById("slide-3").style.zIndex == "1") {
@@ -141,7 +145,7 @@
                     setVolume(bgMusic, 0.2);
                     playAudio(fireMusic);
                 } else {
-                    if (document.getElementById("slide-5").style.zIndex == "1") {
+                    if (document.getElementById("slide-4").style.zIndex == "1") {
                         setVolume(bgMusic, 0.2);
                         playAudio(horrifyMusic);
                     } else {
@@ -151,11 +155,8 @@
                 }
             },
             onTouchEnd: function(swiper, event){
-                if (document.getElementById("slide-3").style.zIndex == "1"){
+                if (document.getElementById("slide-3").style.zIndex != "1"){
                     pauseAudio(fireMusic);
-                }
-                if (document.getElementById("slide-5").style.zIndex == "1") {
-                    pauseAudio(horrifyMusic);
                 }
             }
         });
